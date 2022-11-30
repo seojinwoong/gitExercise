@@ -29,6 +29,19 @@
 - merge : main 브랜치로 이동 => git merge development 
 - rebase : development 브랜치로 이동 => git rebase main => main브랜치로 이동 후 => git merge development (fast-forward하기)
 
+## merge를 할때 충돌이 났을때
+- 너무 복잡하여 되돌리고 싶을땐
+```js
+    git merge --abort
+```
+이렇게 해준다.
+
+- 충돌작업을 해결하고 싶다면
+```js
+    충돌 부분 직접 수정 후 => git add . => git commit 으로 merge 완료
+```
+
+
 
 
 
