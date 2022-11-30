@@ -50,7 +50,8 @@
 
 - 충돌작업을 해결하고 싶다면
 ```js
-    충돌 부분 직접 수정 후 => git add . => git rebase --continue (해결할때까지)
+    충돌 부분 직접 수정 후 => git add . => git rebase --continue => 커밋 (해결할때까지 처음부터 반복)
+    완료되면 main(master) 브랜치로 가서 fast-forward하기
 ```
 
 #### 현재 페이지의 그룹 계산하기
