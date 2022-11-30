@@ -48,6 +48,11 @@
 ```
 이렇게 해준다.
 
+- 충돌작업을 해결하고 싶다면
+```js
+    충돌 부분 직접 수정 후 => git add . => git rebase --continue (해결할때까지)
+```
+
 #### 현재 페이지의 그룹 계산하기
 
 ![](https://user-images.githubusercontent.com/16531837/145596540-7c1ff5e6-60f8-40fc-884b-c10f4f4716a2.png)
