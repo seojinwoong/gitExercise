@@ -75,11 +75,11 @@
     git remote remove (origin 등 원격의 이름)
     => 원격 지우기 (로컬 프로젝트와의 연결만 없애는 것. GitHub의 레포지토리는 지워지지 않음)
 ```
+## 내가 커밋한 것도 있고, 상대방이 커밋한 것도 있을때 (pull => push 순서)
+```js
+    1. pull(merge 방식) => git pull --no-rebase ===> 기록이 남는다.
 
-#### 현재 페이지의 그룹 계산하기
+    2. pull(rebase 방식) => git pull --rebase ===> 원격의 커밋을 먼저 붙이고 그다음 내 커밋을 뒤에다가 붙인다. 기록이 남지 않는다.
+```
 
-![](https://user-images.githubusercontent.com/16531837/145596540-7c1ff5e6-60f8-40fc-884b-c10f4f4716a2.png)
 
-### json-server
-
-https://github.com/typicode/json-server
