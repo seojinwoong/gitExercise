@@ -54,6 +54,28 @@
     완료되면 main(master) 브랜치로 가서 fast-forward하기
 ```
 
+## github 명령어 모음
+```js
+    git remote add origin (원격 저장소 주소)
+    => 원격을 추가한다 그 이름은 origin이고 그 주소는 (원격 저장소 주소) 이다.
+```
+```js
+    git branch -M main 
+    => 로컬, 원격의 기본 브랜치 명을 main으로 한다.
+```
+```js
+    git push -u origin main
+    => 로컬 저장소의 커밋 내역들을 원격으로 push한다(업로드한다.)
+```
+```js
+    git remote 또는 git remote -v
+    => 연결된 원격의 상세정보 알아보기.
+```
+```js
+    git remote remove (origin 등 원격의 이름)
+    => 원격 지우기 (로컬 프로젝트와의 연결만 없애는 것. GitHub의 레포지토리는 지워지지 않음)
+```
+
 #### 현재 페이지의 그룹 계산하기
 
 ![](https://user-images.githubusercontent.com/16531837/145596540-7c1ff5e6-60f8-40fc-884b-c10f4f4716a2.png)
