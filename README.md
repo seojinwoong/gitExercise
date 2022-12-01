@@ -66,6 +66,7 @@
 ```js
     git push -u origin main
     => 로컬 저장소의 커밋 내역들을 원격으로 push한다(업로드한다.)
+    => 이 다음부터는 git push를 해도 origin의 main 브랜치에다가 push를 한다.
 ```
 ```js
     git remote 또는 git remote -v
