@@ -1,1 +1,1 @@
-document.querySelector('.buychart');
+document.querySelector('.buychart2222');
