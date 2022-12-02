@@ -1,3 +1,5 @@
+# 참고) checkout 명령어가 Git 2.23 버전부터 switch, restore로 분리
+
 ## 과거로 돌아가기 => RESET과 REVERT의 차이점
 
 - RESET은 돌아가고자 하는 그 해시코드로 돌아간다 (기록이 남지 않는다.)
@@ -75,6 +77,10 @@
 ```js
     git remote remove (origin 등 원격의 이름)
     => 원격 지우기 (로컬 프로젝트와의 연결만 없애는 것. GitHub의 레포지토리는 지워지지 않음)
+
+    c.f) 원격의 브랜치를 삭제하고 싶을 때
+    git push (원격 이름) --delete (원격의 브랜치명)
+    ex) git push origin --delete jinwoong-branch
 ```
 ## 내가 커밋한 것도 있고, 상대방이 커밋한 것도 있을때 (pull => push 순서)
 ```js
@@ -82,8 +88,20 @@
 
     2. pull(rebase 방식) => git pull --rebase ===> 원격의 커밋을 먼저 붙이고 그다음 내 커밋을 뒤에다가 붙인다. 기록이 남지 않는다.
 ```
-### 로컬의 코드를 원격에다가 강제적용할때
+## 로컬의 코드를 원격에다가 강제적용할때
 ```js
     git push --force (주의할것!)
 ```
+## 로컬에서 내가 만든 브랜치를 원격에다가 추가하고 싶을 때
+```js
+    로컬의 브랜치 이름이 jinwoon-branch라면,,,
+    => git push -u origin jinwoon-branch
+```
+## 원격의 브랜치를 내 로컬로 받아오고 싶을 때
+```js
+    원격의 브랜치 이름이 jungsik-branch라면,,,
+    1) git fetch 하고 git branch -a (또는 --all로 브랜치가 추가되었는지 확인)
+    2) git switch -t origin/jungsik-branch
+```
+
 
