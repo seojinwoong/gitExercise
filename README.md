@@ -103,5 +103,12 @@
     1) git fetch 하고 git branch -a (또는 --all로 브랜치가 추가되었는지 확인)
     2) git switch -t origin/jungsik-branch
 ```
+## add한 파일을 working directory로 내리고 싶을때
+```js
+    git restore --staged 파일명
+    c.f) 그렇다면 add가 된 파일을 아예 취소하고 싶을때는 (git restore 파일명)을 하면 되지 않을까? => 답은 NO.
+    (git restore 파일명) 으로 수정내역을 취소하고 싶으면 해당 파일이 스테이지에 올라가 있으면 안된다. 하지만 번거롭게 이렇게 하기보다는 GUI형식을 이용하자.
+```
+
 
 
