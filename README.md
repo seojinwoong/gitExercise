@@ -121,6 +121,13 @@
 ```js
     git switch 이동하고자 하는 브랜치name
 ```
+## 원격에 있는 작업사항을 일단은 보고만 싶을때 (fetch)
+```js
+    1) git checkout origin/main (origin/master)
+    2) git switch master
+    3) git fetch
+    4) 다시 git checkout origin/main (origin/master)
+```
 
 
 
