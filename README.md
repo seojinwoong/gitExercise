@@ -123,11 +123,61 @@
 ```
 ## 원격에 있는 작업사항을 일단은 보고만 싶을때 (fetch)
 ```js
-    1) git checkout origin/main (origin/master)
-    2) git switch master
-    3) git fetch
-    4) 다시 git checkout origin/main (origin/master)
+    1) git fetch [ c.f) fetch는 모든 브랜치의 변경사항들을 일단 받아만온다. ]
+    2) git checkout origin/main (origin/master)으로 변경사항들을 확인한 다음
+    3) git switch master로 로컬의 브랜치로 이동한다.
+    4) 변경사항을 pull한다.
 ```
+## git config
+```js
+    git config --list  ===> git의 config list들 출력
+    git config -e  ===> 에디터로 git config를 보고싶다면~
+    (c.f vscode로 열고싶다면 => git config --global core.editor "code --wait")
+    
+    1) git pull의 기본전략 (merge로 할지, rebase로 할지)
+    git config pull.rebase false => merge
+    git config pull.rebase true => rebase
+
+    2) 기본 브랜치명
+    git config --global init.defaultBranch main
+
+    3) 로컬 브랜치와 원격 브랜치명을 동일하게 설정하길 원한다면
+    git config --global push.default current
+
+    4) git 명령어 단축키로 설정하기 (ex commit -am 을 'cam'으로)
+    git config --global alias.cam 'commit -am'
+
+```
+
+## git 기록 컨벤션
+
+```js
+(작성법)
+type: subject
+
+body (optional)
+...
+...
+...
+
+footer (optional)
+
+=================================================
+
+(예시)
+feat: 압축파일 미리보기 기능 추가
+
+사용자의 편의를 위해 압축을 풀기 전에
+다음과 같이 압축파일 미리보기를 할 수 있도록 함
+ - 마우스 오른쪽 클릭
+ - 윈도우 탐색기 또는 맥 파인더의 미리보기 창
+
+Closes #125
+
+```
+![non-zero vs even odd](./images/2.png)
+
+
 
 
 
