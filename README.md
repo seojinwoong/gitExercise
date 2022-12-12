@@ -178,6 +178,31 @@ Closes #125
 ![non-zero vs even odd](./images/2.png)
 
 
+## git add, git commit 좀더 세심하게 다루기
+```js
+    1) git add -p (git add를 하나하나 내 변경사항을 확인하며 add를 하고 싶을 때)
+    2) git commit -v (git commit할때 수정사항을 확인할 수 있다.)
+    3) git diff --staged (스테이징으로 올라간 변경사항과 비교하기)
+```
+
+## 작업중이던 코드 한곳으로 치워두기(git stash)
+git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋해시에서든 코드를 적용시킬 수 있다.
+
+```js
+    git stash list ===> stash list들 보기
+    git stash -p ===> git이 나에게 일일이 물어보면서 stash할 부분을 체크한다.
+    git stash -m "메모" (또는) git stash save "메모" ===> stash에 메모를 남기고 싶을때
+    git stash apply "stash id" ===> 특정 stash작업물들을 다시 적용시키기
+    git stash drop "stash id" ===> 특정 stash작업물들을 삭제하기
+    git stash clear ===> git stash list들 모두 지우기
+    git stash pop "stash id" ===> 특정 stash작업물들을 적용하고 해당 stash 내역은 삭제한다.
+```
+
+## 기존의 커밋을 수정하기
+1) 바로 직전의 커밋을 수정하고 싶다면 ===> git commit --amend
+
+
+
 
 
 
