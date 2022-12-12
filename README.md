@@ -143,7 +143,39 @@
 
     3) 로컬 브랜치와 원격 브랜치명을 동일하게 설정하길 원한다면
     git config --global push.default current
+
+    4) git 명령어 단축키로 설정하기 (ex commit -am 을 'cam'으로)
+    git config --global alias.cam 'commit -am'
+
 ```
+
+## git 기록 컨벤션
+
+```js
+(작성법)
+type: subject
+
+body (optional)
+...
+...
+...
+
+footer (optional)
+
+=================================================
+
+(예시)
+feat: 압축파일 미리보기 기능 추가
+
+사용자의 편의를 위해 압축을 풀기 전에
+다음과 같이 압축파일 미리보기를 할 수 있도록 함
+ - 마우스 오른쪽 클릭
+ - 윈도우 탐색기 또는 맥 파인더의 미리보기 창
+
+Closes #125
+
+```
+![non-zero vs even odd](./images/2.png)
 
 
 
