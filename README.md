@@ -199,7 +199,25 @@ git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋�
 ```
 
 ## 기존의 커밋을 수정하기
-1) 바로 직전의 커밋을 수정하고 싶다면 ===> git commit --amend
+1) 바로 직전의 커밋을 수정하고 싶다면 ===> 같이 commit할 작업들을 수행해주고(git add 등) => "git commit --amend"
+
+2) 아싸리 통으로 커밋히스토리를 만지고 싶다면,,, ===> git rebase -i '돌아갈 커밋해시'
+![](./images/3.png)
+
+```js
+    e, edit => 커밋 쪼개기
+    d, drop => 커밋 자체를 삭제하기
+    s, squahs => 커밋합치기
+
+
+    커밋 쪼개는 방법은,,,
+    1) git rebase -i "해결하고 싶은 커밋 직전의 커밋해시"
+    2) git reset HEAD~로 커밋직전으로 또 이동하기
+    3) 변화들을 따로 커밋하기
+    4) 다 끝났으면 git rebase --continue
+```
+
+
 
 
 
