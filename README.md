@@ -217,12 +217,26 @@ git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋�
     4) 다 끝났으면 git rebase --continue
 ```
 
+## git에서 관리하고 있지 않는 파일들 한번에 지우기 ===> git clean
+```js
+    c.f) 그냥 git clean 명령어를 치면 아무런 이벤트도 일어나지 않는다.
+    
+    1) git clearn -n ===> 삭제될 파일들 보여주기
+    2) git clean -d ===> 폴더 포함
+    3) git clean -df ===> (흔히 쓰이는 조합) 폴더포함 git 관리를 안하는 파일들 한꺼번에 지우기
+```
 
+## 특정파일을 특정 commit시점으로 되돌리려면? git restore --source
 
+상황 : index.html 파일만 맨처음 시점으로 되돌리고 싶다.
+```js   
+    git restore --source='커밋해시' index.html
+    c.f) 커밋을 한것은 아님 파일만 수정한 것임
+    다시 원래 상태로 되돌아 가려면,,, ===> git restore index.html
+```
 
-
-
-
-
-
-
+## git reflog ===> 내가 그동안의 작업한 내역들을 확인하는 명령어
+```js
+    실수로 한 작업을 되돌리고 싶을 때
+    git reflog를 쳐서 => git reset --hard "내가 실수로 한 커밋 이전 커밋해시"로 해결!
+```
