@@ -207,14 +207,15 @@ git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋�
 ```js
     e, edit => 커밋 쪼개기
     d, drop => 커밋 자체를 삭제하기
-    s, squahs => 커밋합치기
+    s, squash => 커밋합치기
 
 
     커밋 쪼개는 방법은,,,
     1) git rebase -i "해결하고 싶은 커밋 직전의 커밋해시"
-    2) git reset HEAD~로 커밋직전으로 또 이동하기
-    3) 변화들을 따로 커밋하기
-    4) 다 끝났으면 git rebase --continue
+    2) 해당 커밋에 e, edit 선택
+    3) git reset HEAD~로 커밋직전으로 또 이동하기
+    4) 변화들을 따로 커밋하기
+    5) 다 끝났으면 git rebase --continue
 ```
 
 ## git에서 관리하고 있지 않는 파일들 한번에 지우기 ===> git clean
@@ -281,6 +282,7 @@ tag의 종류 => 1) lightweight 2) annotated
 ```
 ## 다른 브랜치에서 파생된 브랜치 옮겨붙이기 (rebase --onto)
     특정 커밋을 가져올때 일일이 cherry-pick을 해도 되지만, 한꺼번에 가져오고 싶다면 rebase --onto 명령어를 사용해 보자.
+    주의!) rebase --onto 명령어는 브랜치에서 또 파생된 브랜치를 가져올때 쓰는 명령어이다. 주의할것.
 ```js
     git rebase --onto (도착 브랜치) (출발 브랜치) (이동할 브랜치)
     c.f) 암기 TIP 나는 (도착 브랜치)로 (출발 브랜치)에 있는 (이동할 브랜치)를 옮겨 붙이겠다.
