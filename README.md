@@ -298,3 +298,28 @@ tag의 종류 => 1) lightweight 2) annotated
 ```
 ![](./images/4.png)
 
+## git diff (코드의 변경사항을 확인할 수 있는 명령어)
+
+- working directory의 변경사항들을 확인하고 싶다면?
+```js
+    git diff 
+```
+- staging area 의 변경사항들을 확인하고 싶다면?
+```js
+    git diff --staged
+```
+- 간단하게 파일명만 보고싶다면,,, ===> --name-only
+```js
+    git diff --name-only 
+    git diff --staged --name-only
+```
+- 커밋간의 차이 확인
+```js
+    git diff (커밋해시1) (커밋해시2)
+    시간상 (커밋해시1)의 코드가 이전이고 (커밋해시2)의 코드가 이후이다.
+```
+- 브랜치간의 차이도 확인할 수 있다.
+```js
+    git diff (브랜치1) (브랜치2)
+```
+
