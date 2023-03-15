@@ -323,3 +323,20 @@ tag의 종류 => 1) lightweight 2) annotated
     git diff (브랜치1) (브랜치2)
 ```
 
+## git bisect (오류가 발생한 시점 찾아내기)
+- git bisect란? 
+  이진 탐색 알고리즘으로 오류가 나는 커밋의 시점을 찾아내는 git 명령어
+
+- 순서
+```js
+    1) 'git bisect start' 로 bisect 명령어 시작
+    2) 현재 오류가 나고 있으니, 'git bisect bad'로 현재 커밋이 오류가 난다고 찍어준다.
+    3) 오류가 의심되는 지점으로 이동한다 => 'git checkout (오류가 의심되는 커밋해시)'
+    4) 이 이후로 테스트를 하면서, 다음의 과정을 반복
+       오류가 난다면 => 'git bisect bad'
+       오류가 나지 않고 정상 작동한다면 => 'git bisect good'
+    5) 그러면 git이 최초로 오류가 나기 시작한 커밋지점을 뱉어준다.
+    6) bisect 과정을 종료하고 싶다면 => 'git bisect reset'
+```
+
+
