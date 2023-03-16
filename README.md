@@ -338,5 +338,12 @@ tag의 종류 => 1) lightweight 2) annotated
     5) 그러면 git이 최초로 오류가 나기 시작한 커밋지점을 뱉어준다.
     6) bisect 과정을 종료하고 싶다면 => 'git bisect reset'
 ```
+## git hooks (git상의 이벤트마다 자동으로 실행될 스크립트를 지정하는 기능)
 
+- git hooks는 .git > hooks 폴더 안에 있다.
+- 파일 끝에 '.sample' 이라는 명령어가 있는데 이것은 말 그대로 샘플이며, 이것이 없다면 실제로 발현되는 기능이다.
 
+### gitmoji-cli로 git hooks 활용해보기
+1. gitmoji-cli 설치 => npm i -g gitmoji-cli
+2. gitmoji -i => gitmoji 실행
+3. git add => git commit => 이모지선택 후 커밋하기
