@@ -1,5 +1,10 @@
 # 참고) checkout 명령어가 Git 2.23 버전부터 switch, restore로 분리
 
+## git init
+- git init 명령어를 선언하면, git으로 프로젝트로 관리하는 것을 의미한다. (작업의 history는 .git 폴더안에 저장되어 있음)
+![non-zero vs even odd](./images/6.png)
+- 주의! .git 폴더를 삭제하면 그동안의 형상관리가 다 날라가니 의도적으로 삭제하는 상황 외에는 삭제하지 말것.
+
 ## 과거로 돌아가기 => RESET과 REVERT의 차이점
 
 - RESET은 돌아가고자 하는 그 해시코드로 돌아간다 (기록이 남지 않는다.)
