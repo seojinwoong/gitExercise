@@ -5,6 +5,35 @@
 ![non-zero vs even odd](./images/6.png)
 - 주의! .git 폴더를 삭제하면 그동안의 형상관리가 다 날라가니 의도적으로 삭제하는 상황 외에는 삭제하지 말것.
 
+## .gitignore : git에서 버전관리를 하지 않을 파일,폴더를 적어놓는 곳
+```js   
+    # 모든 file.yaml
+    file.yaml
+
+    # 최상위 폴더의 file.yaml
+    /file.yaml
+
+    # 모든 .yaml 확장자 파일
+    *.yaml
+
+    # .yaml 확장자이지만 index.yaml은 무시하지 않을 때
+    *.yaml
+    !index.yaml
+
+    # logs라는 이름의 파일 또는 폴더와 그 내용들
+    logs
+
+    # logs란 이름의 폴더와 그 내용들
+    logs/
+
+    # logs 폴더 바로 안의 index.html 과 data.java 파일
+    logs/index.html 
+    logs/data.java
+
+    # logs 폴더 바로 안, 또는 그 안의 다른 폴더(들) 안의 debug.log
+    logs/**/debug.log
+```
+
 ## 과거로 돌아가기 => RESET과 REVERT의 차이점
 
 - RESET은 돌아가고자 하는 그 해시코드로 돌아간다 (기록이 남지 않는다.)
