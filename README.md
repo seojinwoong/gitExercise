@@ -103,7 +103,7 @@
 
 - 충돌작업을 해결하고 싶다면
 ```js
-    충돌 부분 직접 수정 후 => git add . => git rebase --continue => 커밋 (해결할때까지 처음부터 반복)
+    충돌 부분 직접 수정 후 => git add . => git rebase --continue (해결할때까지 처음부터 반복) => 마지막에 커밋생성
     완료되면 main(master) 브랜치로 가서 fast-forward하기
 ```
 
