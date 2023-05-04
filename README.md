@@ -106,6 +106,22 @@
     완료되면 main(master) 브랜치로 가서 fast-forward하기
 ```
 
+## github 토큰 만들기 (Window 기준)
+1. github 홈페이지에서 우측 상단 settings로 들어가기
+2. 왼쪽 nav 최하단의 Developers Settings
+3. 1번 => 2번처럼 토큰생성
+![non-zero vs even odd](./images/7.png) 
+4. 토큰 생성하기 => 주의! 토큰이 생성되고 해당 페이지를 벗어나면 토큰값을 볼 수 없으니 따로 기록해두기
+5. window에서 자격 증명 관리자 들어가기
+![non-zero vs even odd](./images/8.png) 
+6. 하단의 목록 중에서 'https://github.com' 을 찾아서 편집하기 (없다면 새로 생성)
+![non-zero vs even odd](./images/9.png) 
+7. 1번에 github 이름, 2번에 생성한 토큰값 넣어주기
+![non-zero vs even odd](./images/10.png) 
+8. sourcetree에도 토큰 등록해주기
+![non-zero vs even odd](./images/11.png) 
+![non-zero vs even odd](./images/12.png) 
+
 ## github 명령어 모음
 ```js
     git remote add origin (원격 저장소 주소)
