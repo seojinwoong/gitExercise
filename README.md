@@ -170,6 +170,25 @@
     1) git fetch 하고 git branch -a (또는 --all로 브랜치가 추가되었는지 확인)
     2) git switch -t origin/jungsik-branch
 ```
+## git이 다른 vcs 프로그램들과 구분되는 특징
+1) 스냅샷 방식
+
+![non-zero vs even odd](./images/13.png) 
+
+기존의 버전관리 시스템들 (CVS, Subversion) 같은 경우에는 델타 방식을 사용했다.
+특정 파일이 변경된 부분들을 가져다가 최신 코드에 반영하는 형식이다.
+반면 GIT은 스냅샷 방식을 사용하는데, 각각의 커밋은 모든 파일들의 최신 버전들을 담고있다.
+모든 파일들의 최신버전을 가지고 있기 때문에 용량이나 부하가 크다고 생각하지만 알고리즘으로 효율적으로
+관리를 한다고 한다.
+
+2) 분산 버전 관리
+
+![non-zero vs even odd](./images/14.png) 
+
+기존의 버전관리 시스템들 (CVS, Subversion) 같은 경우에는 중앙집중식 버전 관리이다.
+그래서 인터넷이 끊기거나 하면 사용이 어렵다.
+반면 GIT은 분산버전관리 방식인데, 원격의 모든 commit, branch를 받아오기 때문에
+각자 로컬에서 자유롭게 작업할 수 있다.
 ## add한 파일을 working directory로 내리고 싶을때
 ```js
     git restore --staged 파일명
