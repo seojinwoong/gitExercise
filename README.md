@@ -195,6 +195,28 @@
     c.f) 그렇다면 add가 된 파일을 아예 취소하고 싶을때는 (git restore 파일명)을 하면 되지 않을까? => 답은 NO.
     (git restore 파일명) 으로 수정내역을 취소하고 싶으면 해당 파일이 스테이지에 올라가 있으면 안된다. 하지만 번거롭게 이렇게 하기보다는 GUI형식을 이용하자.
 ```
+## HEAD란?
+HEAD란 현재 속한 브랜치의 가장 최신 커밋을 말한다.
+### HEAD를 이용해 checkout하는 방법
+```js
+    // 현재 커밋에서 3번째 전으로 가고 싶다면 여러가지 방식으로 표현할 수 있다.
+    git checkout HEAD~~~
+    git checkout HEAD^^^
+    git checkout HEAD~3
+    git checkout HEAD^3
+
+    // 또는 커밋해시를 사용해서도 이동 가능하다
+    git checkout (커밋해시)
+
+    // (이동을) 한 단계전으로 되돌리기 ctrl + z 느낌
+    git checkout -
+```
+
+### HEAD를 이용하여 reset하기
+```js
+    git reset HEAD~3 --hard, --soft, --mixed
+```
+
 ## checkout 명령어는 언제쓰는가?
 ```js
     코드 변경없이 단순히 시간여행을 할 수 있다.
