@@ -229,13 +229,30 @@ HEAD란 현재 속한 브랜치의 가장 최신 커밋을 말한다.
 ```js
     git switch 이동하고자 하는 브랜치name
 ```
-## 원격에 있는 작업사항을 일단은 보고만 싶을때 (fetch)
+
+## fetch와 pull의 차이점
+fetch : 원격 저장소의 최신 커밋을 로컬로 '가져오기만' 한다.
+
+pull : 원격 저장소의 최신 커밋을 가져와서 merge 또는 rebase한다. (pull안에 fetch기능이 있다!)
+
+## fetch의 개념을 좀더 상세하게 알아보기
+fetch를 하면, 원격의 변경사항들을 받아오긴하는데 눈으로 확인할 수 없는 익명의 브랜치에 변경사항을 받아온다. 그래서 fetch를 하고 변경사항을 확인만 하려면 다음과 같은 흐름으로 진행한다. (1 ~ 3의 과정, 4는 pull을 해서 실제로 내 로컬코드에 적용하는 것!)
+
 ```js
-    1) git fetch [ c.f) fetch는 모든 브랜치의 변경사항들을 일단 받아만온다. ]
-    2) git checkout origin/main (origin/master)으로 변경사항들을 확인한 다음
-    3) git switch master로 로컬의 브랜치로 이동한다.
-    4) 변경사항을 pull한다.
+    1) git fetch
+    2) git checkout origin/main (익명의 브랜치로 가서 변경사항들을 확인하는 것)
+    3) git switch main (다시 로컬의 메인 브랜치로 오기)
+    4) git pull (변경사항을 실제로 코드에 merge 또는 rebase 하기)
 ```
+## 원격의 브랜치를 확인하고 로컬에 적용할 때 (이때도 fetch를 쓴다!)
+```js
+    1) git fetch 
+    2) (새로 받아온 원격의 브랜치 이름이 'new-branch'라면,,,)
+        git checkout origin/new-branch
+    3) git switch main (다시 로컬로 돌아오기)
+    4) git switch -t origin/new-branch
+``` 
+
 ## git config
 ```js
     git config --list  ===> git의 config list들 출력
