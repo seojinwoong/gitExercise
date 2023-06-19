@@ -303,12 +303,18 @@ Closes #125
 ![non-zero vs even odd](./images/2.png)
 
 
-## git add, git commit 좀더 세심하게 다루기
+## git add -p, git commit -v으로 커밋을 좀더 세심하게 다루기
+- git add -p를 하면, 헝크(hunk)별로 확인하며 변경사항들을 staging할 수 있다.
+  (헝크란? 여러 변경사항을 임의로 묶은 덩어리라고 생각하자)
 ```js
-    1) git add -p (git add를 하나하나 내 변경사항을 확인하며 add를 하고 싶을 때)
-    2) git commit -v (git commit할때 수정사항을 확인할 수 있다.)
-    3) git diff --staged (스테이징으로 올라간 변경사항과 비교하기)
+    git add -p를 하면, hunk별로 묶어서 스테이징에 올릴지 물어본다(y,n으로 답하기)
 ```
+- git commit -v을 하면, 커밋내역에 변경사항까지 나온다.
+
+c.f) git diff --staged : 스테이징에 올라온 변경사항이랑 이전 변경사항을 비교한다.
+
+↓ 그냥 이렇게 변경사항을 보는거라고 생각하면 된다!
+![15.png](./images/15.png)
 
 ## 작업중이던 코드 한곳으로 치워두기(git stash)
 git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋해시에서든 코드를 적용시킬 수 있다.
