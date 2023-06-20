@@ -318,6 +318,7 @@ c.f) git diff --staged : 스테이징에 올라온 변경사항이랑 이전 변
 
 ## 작업중이던 코드 한곳으로 치워두기(git stash)
 git stash로 치워둔 작업코드는 어느 브랜치에서든, 어떤 커밋해시에서든 코드를 적용시킬 수 있다.
+c.f) stash를 하려면 => 스테이징에 올리는 것이 아니라 tracking된 상태이어야 한다.
 
 ```js
     git stash list ===> stash list들 보기
