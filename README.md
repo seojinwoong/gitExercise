@@ -343,7 +343,7 @@ case 2) 바로 직전의 커밋파일들에서 변경하고 싶은게 있다면
 git commit -a --amend -m "수정할 커밋 메시지" <= 이렇게 하면 add와 커밋메세지 변경을 한번에 해준다.
  
 ## 기존의 커밋을 수정하기 (git rebase -i)
-아싸리 통으로 커밋히스토리를 만지고 싶다면,,, ===> git rebase -i '돌아갈 커밋해시'
+한번에 여러가지 커밋히스토리를 수정하고 싶다면,,, ===> git rebase -i '수정할 커밋보다 이전 커밋이면 된다'
 
 ![](./images/3.png)
 
@@ -351,16 +351,20 @@ git commit -a --amend -m "수정할 커밋 메시지" <= 이렇게 하면 add와
     e, edit => 커밋 쪼개기
     d, drop => 커밋 자체를 삭제하기
     s, squash => 커밋합치기
-
-
-    커밋 쪼개는 방법은,,,
-    1) git rebase -i "해결하고 싶은 커밋 직전의 커밋해시"
-    2) 해당 커밋에 e, edit 선택
-    3) git reset HEAD~로 커밋직전으로 또 이동하기
-    4) 변화들을 따로 커밋하기
-    5) 다 끝났으면 git rebase --continue
 ```
 
+![](./images/16.png)
+
+## edit으로 커밋을 쪼개기 방법
+![](./images/17.png)
+
+돌아간 시점에서 ```git reset HEAD~```로 바로 직전 커밋으로 이동한다.
+
+git status로 상태를 보면 변경사항들이 stage되지 않은 상태인 것을 확인할 수 있다. (reset --mixed로 이전 상태를 돌아갔기 때문)
+
+원하는 섹션으로 ```git add => git commit``` 을 반복해준다.
+
+커밋이 완료되었다면 ```git rebase --continue``` 로 마무리해준다.
 ## git에서 관리하고 있지 않는 파일들 한번에 지우기 ===> git clean
 ```js
     c.f) 그냥 git clean 명령어를 치면 아무런 이벤트도 일어나지 않는다.
