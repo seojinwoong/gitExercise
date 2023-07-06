@@ -414,6 +414,24 @@ git status로 상태를 보면 변경사항들이 stage되지 않은 상태인 �
 - 원하는 패턴으로 태그 필터링하기 ```git tag -l 'v1.*'``` v1.로 시작하는 태그리스트가 모두 나온다.
 - 태그로 checkout을 할 수도 있다 ! ```git checkout v1.2.1```
 
+## 로컬의 tag들을 원격으로 올려보자
+- ```git push (원격명) (태그명)```  <= 하나의 태그를 원격에 올리기
+
+  ```ex) git push origin v2.0.0```
+
+- ```git push --delete (원격명) (태그명)``` <= 특정 태그 원격에서 삭제하기
+
+  ```ex) git push --delete origin v1.0.0```
+
+- ```git push --tags``` <= 로컬의 모든 태그들 원격에 올리기
+
+## github의 release (태그들 중 다운로드 가능한 배포판으로 만들기 기능)
+https://github.com/naver/nanumfont (예시 : 네이버 나눔고딕 코딩글꼴 예시)
+
+릴리즈 만드는방법 (매우 간단함!)
+    1) Github 태그 목록으로 간다
+    2) 원하는 태그에서 Create release
+    3) 제목과 내용(마크다운 형식으로)을 입력 후 Publish release
 
 ## merge의 두가지 방법 (fast-forward vs 3-way-merge)
 1) fast-forward는 한가지 브랜치에서만 커밋내역이 있을때 HEAD만 제일 최신의 커밋끝단으로만 빨리 감기를 하는 것이다.
