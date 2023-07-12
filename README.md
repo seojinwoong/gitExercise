@@ -451,8 +451,16 @@ https://github.com/naver/nanumfont (예시 : 네이버 나눔고딕 코딩글꼴
 
 ## 다른 브랜치에서 원하는 커밋만 따와서 적용하기 (cherry-pick)
 ```js
-    git cherry-pick "특정커밋해시" ===> 특정커밋에 있는 변화들을 복제해서 가져오는 것이다. (그래서 cherry-pick으로 가져온 새로운 커밋과 그 대상이 되는 커밋은 별개의 커밋이다.)
+   git cherry-pick (가져오고 싶은 작업커밋의 해시)
 ```
+현재 위치하고 있는 브랜치가 main이고 another-branch의 index.html 파일 추가 커밋을 가져오고 싶다면 (커밋해시가 예를 들어 qwe123이라면)
+```js
+    git cherry-pick qwe123 
+```
+이렇게 하면 메인 브랜치에 index.html이 생긴다
+
+c.f) cherry-pick을 해서 가져온 작업의 커밋은 기존과 다른 커밋이다. (커밋해시가 다르다)
+
 ## 다른 브랜치에서 파생된 브랜치 옮겨붙이기 (rebase --onto)
     특정 커밋을 가져올때 일일이 cherry-pick을 해도 되지만, 한꺼번에 가져오고 싶다면 rebase --onto 명령어를 사용해 보자.
     주의!) rebase --onto 명령어는 브랜치에서 또 파생된 브랜치를 가져올때 쓰는 명령어이다. 주의할것.
