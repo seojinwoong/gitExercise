@@ -461,17 +461,21 @@ https://github.com/naver/nanumfont (예시 : 네이버 나눔고딕 코딩글꼴
 
 c.f) cherry-pick을 해서 가져온 작업의 커밋은 기존과 다른 커밋이다. (커밋해시가 다르다)
 
-## 다른 브랜치에서 파생된 브랜치 옮겨붙이기 (rebase --onto)
-    특정 커밋을 가져올때 일일이 cherry-pick을 해도 되지만, 한꺼번에 가져오고 싶다면 rebase --onto 명령어를 사용해 보자.
-    주의!) rebase --onto 명령어는 브랜치에서 또 파생된 브랜치를 가져올때 쓰는 명령어이다. 주의할것.
+## 다른 브랜치에서 "파생된" 브랜치 옮겨붙이기 (rebase --onto)
+다른 브랜치에서 파생된 또다른 브랜치의 커밋내역을 가져오고 싶을 때 rebase --onto 명령어로 작업할 수 있다.
+
+![](./images/18.png)
+
 ```js
-    git rebase --onto (도착 브랜치) (출발 브랜치) (이동할 브랜치)
-    c.f) 암기 TIP 나는 (도착 브랜치)로 (출발 브랜치)에 있는 (이동할 브랜치)를 옮겨 붙이겠다.
-        그리고 rebase --onto는 해당하는 브랜치를 복사하는 것이 아니다. 그것을 그대로 옮기는것이다.
+    git rebase --onto (도착 브랜치) (출발 브랜치) (이동할 브랜치) 
+    c.f) 암기 TIP! 도출이 나는 (이동할 브랜치)를 (도착 브랜치)에다가 붙일건데, 그건 (출발 브랜치)에 있는 거임.
+        그리고 rebase --onto는 해당하는 브랜치를 복사하는 것이 아니다. 그것을 그대로 옮기는것이다. (rebase임을 기억)
 
     rebase --onto가 완료되었다면, 일반적인 rebase방식으로 fast-forward를하자.
     ===> git switch master => git merge "rebase한 브랜치명"
 ```
+c.f) rebase --onto를 되돌리려면? 
+[Git) 실수로 삭제한 Branch 복구하기-다른분이 정리해주신 링크](https://shanepark.tistory.com/317)
 
 ## 다른 브랜치의 여러 커밋들을 하나로 묶어서 가져오기 (merge --squash)
 ```js
