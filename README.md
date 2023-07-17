@@ -477,9 +477,12 @@ c.f) cherry-pick을 해서 가져온 작업의 커밋은 기존과 다른 커밋
 c.f) rebase --onto를 되돌리려면? 
 [Git) 실수로 삭제한 Branch 복구하기-다른분이 정리해주신 링크](https://shanepark.tistory.com/317)
 
-## 다른 브랜치의 여러 커밋들을 하나로 묶어서 가져오기 (merge --squash)
-```js
-    git merge --squash (대상 브랜치) => 변경사항들이 스테이지 되어 있음 (git add 되어 있음) ===> 이후 본인 마음대로 수정및 commit하면된다.
+## 다른 브랜치의 커밋들을 하나로 뭉쳐서 가져오고 싶다면? git merge --squash (기존 merge랑 다름 주의!)
+
+### 상황 : login-test라는 브랜치에 커밋을 세번 했는데 login.html -> login.css -> login.js 순으로 파일을 커밋했다. 테스트를 돌려 정상적으로 돌아간 것까지 확인해서 main 브랜치에 옮기려 하는데 login-test브랜치를 그대로 유지하면서 그 작업내용만을 한번에 가져오고 싶다. 이런 상황에서 git merge --squash 명령어가 적합하다.
+
+```js 
+    git merge --squash (가져오려는 브랜치)
 ```
 ![](./images/4.png)
 
