@@ -486,6 +486,17 @@ c.f) rebase --onto를 되돌리려면?
 ```
 ![](./images/4.png)
 
+## 널리 알려진 git 협업 방법 => Gitflow
+
+![](./images/19.png)
+### ↑ 'Vincent Driessen at nvie'의 Gitflow 도표
+
+- main(OR master) 브랜치 : 제품 출시/배포 브랜치
+- develop 브랜치 : 다음 출시/배포를 위한 개발진행 브랜치
+- feature 브랜치 : develop브랜치에서 파생되어 각각의 기능을 feature브랜치에서 작업하고 작업이 완료되면 develop 브랜치로 병합한다. (그래서 feature 브랜치는 여러개가 될 수 있다.)
+- release 브랜치 : 출시/배포 전 테스트 진행(QA)
+- hotfix 브랜치 : 운영기에서 긴급하게 나타나는 버그를 수정하는 브랜치    
+
 ## git diff (코드의 변경사항을 확인할 수 있는 명령어)
 
 - working directory의 변경사항들을 확인하고 싶다면?
