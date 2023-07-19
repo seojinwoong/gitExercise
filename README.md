@@ -497,6 +497,16 @@ c.f) rebase --onto를 되돌리려면?
 - release 브랜치 : 출시/배포 전 테스트 진행(QA)
 - hotfix 브랜치 : 운영기에서 긴급하게 나타나는 버그를 수정하는 브랜치    
 
+## git log 좀 더 상세하게 알아보기
+```js
+    git log -3 => 최근 3개의 커밋내역 보기
+    git log --stat 또는 git log --shortstat => 변경한 파일의 갯수를 확인하고 싶다면,,,
+    git log --oneline => 한줄로 log 보기
+    git log -S (static) => 파일에서 "static"을 변경한 커밋 내역을들 확인하는 명령어
+    git log --grep (안녕) => 커밋메세지 중 "안녕"이 포함되어 있는 커밋 내역들을 출력하는 명령어
+     
+```
+
 ## git diff (코드의 변경사항을 확인할 수 있는 명령어)
 
 - working directory의 변경사항들을 확인하고 싶다면?
