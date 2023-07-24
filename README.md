@@ -502,7 +502,7 @@ c.f) rebase --onto를 되돌리려면?
     git log -3 => 최근 3개의 커밋내역 보기
     git log --stat 또는 git log --shortstat => 변경한 파일의 갯수를 확인하고 싶다면,,,
     git log --oneline => 한줄로 log 보기
-    git log -S (static) => 파일에서 "static"을 변경한 커밋 내역을들 확인하는 명령어
+    git log -S (static) => 파일에서 "static"을 변경한 커밋 내역들을 확인하는 명령어
     git log --grep (안녕) => 커밋메세지 중 "안녕"이 포함되어 있는 커밋 내역들을 출력하는 명령어
      
 ```
