@@ -509,15 +509,15 @@ c.f) rebase --onto를 되돌리려면?
 
 ## git diff (코드의 변경사항을 확인할 수 있는 명령어)
 
-- working directory의 변경사항들을 확인하고 싶다면?
+- working directory에 있는 변경사항들을 확인하고 싶다면?
 ```js
     git diff 
 ```
-- staging area 의 변경사항들을 확인하고 싶다면?
+- staging area에 있는 변경사항들을 확인하고 싶다면?
 ```js
     git diff --staged
 ```
-- 간단하게 파일명만 보고싶다면,,, ===> --name-only
+- 간단하게 파일명만 보고싶다면,,, ===> --name-only 옵션
 ```js
     git diff --name-only 
     git diff --staged --name-only
