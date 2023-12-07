@@ -355,6 +355,13 @@ git commit -a --amend -m "수정할 커밋 메시지" <= 이렇게 하면 add와
 
 ![](./images/16.png)
 
+```js
+     주의!! rebase를 하면 기존의 커밋 해시가 모두 달라짐에 유의할것
+```
+![](./images/20.png)
+![](./images/21.png)
+
+
 ## edit으로 커밋을 쪼개기 방법
 ![](./images/17.png)
 
